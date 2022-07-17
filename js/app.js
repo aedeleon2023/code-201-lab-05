@@ -62,6 +62,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let multiplyTwo = multiply(multiplyOne, c)[0];
   let thirdElement = `${a} and ${b} and ${c} sum to ${addTwo}.`;
   let fourthElement = `The product of ${a} and ${b} and ${c} is ${multiplyTwo}.`;
+
   return [addTwo, multiplyTwo, thirdElement, fourthElement];
 }
 
@@ -87,7 +88,6 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) { //eslint-disable-line
   let addSum = sum(testArray[0], testArray[1])[0];
   let addSumTwo = sum(addSum, testArray[2])[0];
-
   let string = `${testArray} was passed in as an array of numbers, and ${addSumTwo} is their sum.`;
 
   return [addSumTwo, string];
@@ -113,11 +113,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let multiplyOne = multiply(multArr[0], multArr[1])[0];
+  let multiplyTwo = multiply(multiplyOne, multArr[2])[0];
+  let string = `The numbers ${multArr} have a product of ${multiplyTwo}.`;
+
+  return [multiplyTwo, string];
 }
 
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+// eslint-disable-next-line no-undef
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
